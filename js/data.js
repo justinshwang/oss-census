@@ -13112,6 +13112,87 @@ var data = {
             "subtitle": "2008",
             "title": "Contributors compared by Ecosystem Size and % Women"
         },
+        "2017": {
+            "data": [
+                {
+                    "name": "Shell",
+                    "y": 156394,
+                    "z": 1.84
+                },
+                {
+                    "name": "Objective-c",
+                    "y": 33520,
+                    "z": 2.29
+                },
+                {
+                    "name": "C",
+                    "y": 147812,
+                    "z": 2.3
+                },
+                {
+                    "name": "Php",
+                    "y": 151494,
+                    "z": 2.3
+                },
+                {
+                    "name": "C#",
+                    "y": 74879,
+                    "z": 2.33
+                },
+                {
+                    "name": "Go",
+                    "y": 65457,
+                    "z": 2.41
+                },
+                {
+                    "name": "C++",
+                    "y": 166311,
+                    "z": 2.61
+                },
+                {
+                    "name": "Typescript",
+                    "y": 33758,
+                    "z": 2.83
+                },
+                {
+                    "name": "Java",
+                    "y": 263739,
+                    "z": 2.95
+                },
+                {
+                    "name": "Python",
+                    "y": 292049,
+                    "z": 3.61
+                },
+                {
+                    "name": "Javascript",
+                    "y": 448190,
+                    "z": 3.88
+                },
+                {
+                    "name": "Ruby",
+                    "y": 137094,
+                    "z": 4.68
+                },
+                {
+                    "name": "Css",
+                    "y": 108193,
+                    "z": 5.25
+                },
+                {
+                    "name": "Jupyter",
+                    "y": 19816,
+                    "z": 5.74
+                },
+                {
+                    "name": "Html",
+                    "y": 184844,
+                    "z": 5.81
+                }
+            ],
+            "subtitle": "2017",
+            "title": "Contributors compared by Ecosystem Size and % Women"
+        },
         "2018": {
             "data": [
                 {

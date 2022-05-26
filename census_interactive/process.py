@@ -360,10 +360,16 @@ def load_contributor_bar(dat_path, store_path):
     with open(store_path+'/'+'all_bar'+'.json', 'w') as out_file:
         json.dump(out_dict, out_file)
 
+    # Save data to CSV for additional data analysis 
+    csv_data = pd.DataFrame.from_dict(out_dict['data']).explode('data')
+    csv_data.to_csv(store_path+'/'+'all_bar'+'.csv')
+
 
 
 def load_contributor_pie(dat_path, store_path, year_opt):
     """
+    Polar-chart styled pie chart
+
     Stores formatted JavaScript variables for graph from:
     All active project count by window: './project/'
 
@@ -422,6 +428,9 @@ def load_contributor_pie(dat_path, store_path, year_opt):
     with open(store_path+'/'+'all_pie'+'.json', 'w') as out_file:
         json.dump(out_dict, out_file)
 
+    # Save data to CSV for additional data analysis 
+    csv_data = pd.DataFrame.from_dict(out_dict['data'])
+    csv_data.to_csv(store_path+'/'+'all_pie'+'.csv')
 
 
 def load_contributor_stack(dat_path, store_path):
@@ -490,6 +499,9 @@ def load_contributor_stack(dat_path, store_path):
     with open(store_path+'/'+'all_stack'+'.json', 'w') as out_file:
             json.dump(out_dict, out_file)
 
+    # Save data to CSV for additional data analysis 
+    csv_data = pd.DataFrame(data=out_dict['data']).explode('data')
+    csv_data.to_csv(store_path+'/'+'all_stack'+'.csv')
 
 
 # def load_commit_bar(dat_path, store_path, compare_opt):

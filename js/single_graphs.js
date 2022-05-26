@@ -4,7 +4,7 @@ function update() {
     var selectCat = document.getElementById('category-select');
     var selectGraph = document.getElementById('graph-select');
     // TODO: Add year select menu
-    var selectYear = '2018';
+    var selectYear = '2017';
 
     localStorage.setItem("category", selectCat.options[selectCat.selectedIndex].value);
     localStorage.setItem("year", selectYear);

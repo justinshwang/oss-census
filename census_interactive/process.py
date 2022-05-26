@@ -307,11 +307,10 @@ def load_contributor_bar(dat_path, store_path):
     :return: None
     """ 
 
-    langs = ['Python', 'C#', 'JavaScript', 'Java', 'Go', 'Ruby', 'C++',
-            'TypeScript', 'PHP', 'C', 'HTML', 'CSS', 'Jupyter', 'Shell', 'Objective-C']
-    
- 
+    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
+             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
+    
     colors = ["#f29d4b", "#de2d26"]
     for compare in ['female', 'male']:
         add_data = dict()
@@ -379,9 +378,8 @@ def load_contributor_pie(dat_path, store_path, year_opt):
     :return: None
     """ 
 
-    langs = ['Python', 'C#', 'JavaScript', 'Java', 'Go', 'Ruby', 'C++',
-            'TypeScript', 'PHP', 'C', 'HTML', 'CSS', 'Jupyter', 'Shell', 'Objective-C']
-    
+    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
+             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
     # Data collection begins in 1/2008
     year_start = (int(year_opt) - 2008) * 4
@@ -444,8 +442,8 @@ def load_contributor_stack(dat_path, store_path):
     :return: None
     """ 
 
-    langs = ['Python', 'C#', 'JavaScript', 'Java', 'Go', 'Ruby', 'C++',
-            'TypeScript', 'PHP', 'C', 'HTML', 'CSS', 'Jupyter', 'Shell', 'Objective-C']
+    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
+             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
 
     for lang in langs:

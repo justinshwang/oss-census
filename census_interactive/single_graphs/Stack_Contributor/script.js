@@ -35,6 +35,7 @@ function graphStack() {
                 lineWidth: 1,
                 marker: {
                     lineWidth: 1,
+                    radius: 2,
                     lineColor: '#666666'
                 }
             }

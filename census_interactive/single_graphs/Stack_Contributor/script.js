@@ -1,4 +1,10 @@
 function graphStack() {
+    Highcharts.setOptions({
+        colors: ['#e6ecff', '#ccd9ff', '#b3c6ff', '#99b3ff', '#809fff', '#668cff',
+                '#4d79ff', '#3366ff', '#1a53ff', '#0040ff', '#0039e6', '#0033cc', 
+                '#002db3', '#001a66', '#000d33']
+    });
+    
     new Highcharts.chart('stack-cont', {
         chart: {
             type: 'area',   

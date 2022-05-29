@@ -21,7 +21,7 @@ def main():
     # Contributor 
     data["Contributor"] = dict()
     for lang in langs:
-        dat_path = './census_interactive/data/raw/contributor_by_win/'+lang+'.csv'
+        dat_path = './census_interactive/data/raw/final_gender_contrib/'+lang+'.csv'
         store_path = './census_interactive/data/processed/contributor'
         load_contributor(lang, dat_path, store_path)
 
@@ -33,7 +33,7 @@ def main():
     # Commits
     data["Commit"] = dict()
     for lang in langs:  
-        dat_path = './census_interactive/data/raw/commits_by_win/'+lang+'.csv'
+        dat_path = './census_interactive/data/raw/final_gender_commit/'+lang+'.csv'
         store_path = './census_interactive/data/processed/commit'
         load_commit(lang, dat_path, store_path)
 
@@ -72,7 +72,7 @@ def main():
     
     # Focus on Contributor for bar graphs
     data_pie["Contributor"] = dict()
-    dat_path = './census_interactive/data/raw/contributor_by_win/'
+    dat_path = './census_interactive/data/raw/final_gender_contrib/'
 
     for year_opt in year_opts:
         # Updates processed JSON file
@@ -91,7 +91,7 @@ def main():
     
     # Focus on Contributor for bar graphs
     data_bar["Contributor"] = dict()
-    dat_path = './census_interactive/data/raw/contributor_by_win/'
+    dat_path = './census_interactive/data/raw/final_gender_contrib/'
 
     # Updates processed JSON file
     load_contributor_bar(dat_path, store_path)
@@ -110,7 +110,7 @@ def main():
     
     # Focus on Contributor for bar graphs
     data_stack["Contributor"] = dict()
-    dat_path = './census_interactive/data/raw/contributor_by_win/'
+    dat_path = './census_interactive/data/raw/final_gender_contrib/'
 
     # Updates processed JSON file
     load_contributor_stack(dat_path, store_path)

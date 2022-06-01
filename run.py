@@ -14,6 +14,9 @@ def main():
     langs = [] if config["languages"] is None else config["languages"]
     # Alphabetize langs list
     langs.sort()
+    # All unnecessary for comparison visualizations
+    if 'All' in langs:
+        langs.remove('All')
     ##########################################
 
 

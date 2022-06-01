@@ -1,4 +1,5 @@
 languages:
+- All
 - Atom
 - Bower
 - Cargo

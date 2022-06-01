@@ -39,24 +39,29 @@ Executing the `run.py` script invokes calls to the process.py functions for spec
 
 **js/parse** defines the JSON storage structure and a function to access each graph's data given a category and language.
 
-**config.yaml** lists all data that would like to be processed. If only specific language's CSV files are updated for example, we may not want to wait for everything to update. The following are the maximum options that can be applied:
+**config.yaml** lists all data that would like to be processed. If only specific language's (package managers) CSV files are updated for example, we may not want to wait for everything to update. The following are the maximum options that can be applied:
 ```
 languages:
-- JavaScript
-- Python
-- Java
+- Atom
+- Bower
+- Cargo
+- Clojars
+- CocoaPods
+- CPAN
+- CRAN
 - Go
-- Ruby
-- C++
-- TypeScript
-- PHP
-- C#
-- C
-- HTML
-- CSS
-- Jupyter
-- Shell
-- Objective-C
+- Hackage
+- Hex
+- Maven
+- Meteor
+- NPM
+- NuGet
+- Packagist
+- PlatformIO
+- Pub
+- Puppet
+- Pypi
+- Rubygems
 - All
 years:
 - 2008

@@ -297,18 +297,17 @@ def load_project(lang, dat_path, store_path):
 
 ## Single Graph functions ##
 
-def load_contributor_bar(dat_path, store_path):
+def load_contributor_bar(dat_path, store_path, langs):
     """
     Stores formatted JavaScript variables for graph from:
     All active project count by window: './project/'
 
     :string dat_path: CSV data path
     :string store_path: path to Contributor graph settings
+    :list langs: alphabetized list of languages used
     :return: None
     """ 
 
-    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
-             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
     
     colors = ["#f29d4b", "#de2d26"]
@@ -365,7 +364,7 @@ def load_contributor_bar(dat_path, store_path):
 
 
 
-def load_contributor_pie(dat_path, store_path, year_opt):
+def load_contributor_pie(dat_path, store_path, langs, year_opt):
     """
     Polar-chart styled pie chart
 
@@ -378,8 +377,6 @@ def load_contributor_pie(dat_path, store_path, year_opt):
     :return: None
     """ 
 
-    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
-             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
     # Data collection begins in 1/2008
     year_start = (int(year_opt) - 2008) * 4
@@ -397,10 +394,11 @@ def load_contributor_pie(dat_path, store_path, year_opt):
         # Year index moves in 3 month intervals start in 2008
         total_women = sum(list(dat["female"+"_all"])[year_start:year_start+4])
         total = sum(list(dat["all"+"_all"])[year_start:year_start+4])
+
         # Width correlates with ecosystem size
         add_data["y"] = total
         # Length correlated with % of Women 
-        add_data["z"] = round((total_women / total * 100), 2)
+        add_data["z"] = 0 if not total else round((total_women / total * 100), 2)
 
         if not data:
             data.append(add_data)
@@ -431,7 +429,7 @@ def load_contributor_pie(dat_path, store_path, year_opt):
     csv_data.to_csv(store_path+'/'+'all_pie'+'.csv')
 
 
-def load_contributor_stack(dat_path, store_path):
+def load_contributor_stack(dat_path, store_path, langs):
     """
     Stores formatted JavaScript variables for graph from:
     All active contributor by gender by window: './contributor/all/'
@@ -439,11 +437,10 @@ def load_contributor_stack(dat_path, store_path):
 
     :string dat_path: CSV pandas data
     :string store_path: path to Contributor graph settings
+    :list langs: alphabetized list of languages used
     :return: None
     """ 
 
-    langs = ['C', 'C++', 'C#', 'CSS', 'Go', 'HTML', 'Java', 'JavaScript', 'Jupyter', 'Objective-C',
-             'PHP', 'Python', 'Ruby',  'Shell', 'TypeScript']
     data = []
 
     for lang in langs:
